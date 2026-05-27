@@ -47,6 +47,11 @@ button {
     height: 40px;
     margin-right: 8px;
     float: right;
+    background-color: blue;
+}
+
+button:disabled {
+    background-color: #e60e0e;
 }
 
 .titulo {

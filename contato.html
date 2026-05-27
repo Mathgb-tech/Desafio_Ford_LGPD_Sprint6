@@ -37,7 +37,7 @@
             </div>
             <div>
                 <h2 class="titulo">Sobre Você</h2>
-            <form onsubmit="Post(this);" id="formulario"> 
+            <form onsubmit="return Post(this);" id="formulario"> 
                 <input type="text" id="nomeid" name="nome" placeholder="NOME*" class="fordform" required>
                 <input type="text" name="sobrenome" placeholder="SOBRENOME" class="fordform" required>
                 <input type="email" name="email" placeholder="E-MAIL*" class="fordform" required>
@@ -54,7 +54,8 @@
                     <option>SOLICITAÇÃO</option>
                 </select>
                 <textarea name="mensagem" id="mensagem1" placeholder="INSIRA MENSAGEM" class="fordform"></textarea>
-            <button type="submit" id="btn">Enviar</button>
+                <input type="checkbox" name="check" id="checado">
+            <button type="submit" id="btn" disabled>Enviar</button>
             </form>
             </div>
         </div>
