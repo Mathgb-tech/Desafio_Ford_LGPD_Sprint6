@@ -1,59 +1,110 @@
-.fordform {
-    display: block;
-    width: 300px;
-    border: 1px solid #cccccc;
-    border-radius: 10px;
-    height: 26px;
-    margin: 8px;
-    font-size: 13px;
-    padding: 5px;
-}
-
-select.fordform {
-    width: 310px;
-    height: 36px;
-    color: #807d7d;
-}
-
-input:focus-visible {
-    outline: none;
-}
-
-select:focus-visible {
-    outline: none;
-}
-
-main div {
-    display: inline-block;
-    vertical-align: top;
-    text-align: left;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
 .forms {
-    display: block;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+
+    padding: 40px 20px;
+
+    flex-wrap: wrap;
 }
 
-h2 {
-    text-align: left;
-    font-weight: 800;
-}
-
-
-button {
-    width: 200px;
-    height: 40px;
-    margin-right: 8px;
-    float: right;
-    background-color: blue;
-}
-
-button:disabled {
-    background-color: #e60e0e;
+.forms img {
+    width: 350px;
+    max-width: 100%;
 }
 
 .titulo {
-    margin-left: 8px;
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+form {
+    width: 100%;
+    max-width: 500px;
+}
+
+.fordform {
+    width: 100%;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    height: 40px;
+
+    margin-bottom: 12px;
+
+    font-size: 13px;
+    padding: 10px;
+
+    box-sizing: border-box;
+}
+
+select.fordform {
+    color: #807d7d;
+}
+
+textarea.fordform {
+    min-height: 120px;
+    resize: none;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: none;
+    border: 1px solid #1351d8;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+.checkbox-group p {
+    margin: 0;
+    font-size: 14px;
+}
+
+button {
+    width: 200px;
+    height: 45px;
+
+    margin-top: 20px;
+
+    background: #1351d8;
+    color: #fff;
+
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1b357e;
+}
+
+button:disabled {
+    background-color: #8190b9;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .forms {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
 }
